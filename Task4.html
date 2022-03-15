@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 4: Function to Slice an array of strings</title>
+    </head>
+    <script>
+        function slicearr()
+        {
+            this.task=new Array("Task1","Task2","Task3","Task4","Task5");
+            document.write(this.task);
+            document.write("<br />");
+            this.purgetask=function(num)
+            {
+                this.task.splice(num,1);
+                document.write("After deleting element <br />");
+                document.write(this.task);    
+            }
+        }
+        var obj= new slicearr();
+        obj.purgetask(4);
+    </script>
+    <body>
+
+    </body>
+</html>

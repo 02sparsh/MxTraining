@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Task 3: BankingApp </title>
+    </head>
+    <script>
+        function BankingApp(){
+            this.amount=0;
+            this.createAcc=function(initialamt)
+            {
+                    this.amount=initialamt;
+                    document.write("Account Created"+"<br />")
+            }
+
+            this.deposit=function(amt){
+                let result=this.amount+amt;
+                this.amount=result;
+            }
+            this.withdraw=function(money){
+                if(money>this.amount)
+                {
+                    document.write("You do not have sufficient balance"+"<br />");
+                }
+                else
+                {
+                    let result=this.amount-money;
+                    this.amount=result;
+                }
+                document.write("Current amount is "+this.amount);
+            }
+        }
+        var obj= new BankingApp();
+        obj.createAcc(2000);
+        obj.deposit(100);
+        obj.withdraw(500);
+    </script>
+</html>
